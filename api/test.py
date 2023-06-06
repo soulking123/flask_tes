@@ -1,12 +1,12 @@
 import requests
 from flask import jsonify
 
-inputs = {
+input1 = {
         "gender": "Men",
         "usage": "Casual",
         "baseColour": "Blue"
     }
 
-resp = requests.post("http://localhost:5000/", files={"id": "0"})
+resp = requests.post("http://localhost:5000/", json=input1)
 
-print(resp)
+print(resp.json())
